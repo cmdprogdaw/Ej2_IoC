@@ -10,9 +10,9 @@ import com.cris.IoC.almacenamiento.Almacenamiento;
 public class Francia implements Almacenamiento{
 
 	@Override
-	public Integer getIVA() {
+	public float getIVA() {
 
-		return 25;
+		return 0.25f;
 	}
 
 }

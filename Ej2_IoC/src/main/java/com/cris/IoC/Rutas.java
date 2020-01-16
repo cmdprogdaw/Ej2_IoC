@@ -23,18 +23,20 @@ public class Rutas {
 
 	@GetMapping("/precio/francia/{cantidad}")
 	@ResponseBody
-	public String francia(@PathVariable Integer cantidad, PrecioFinal precioFinal){
+	public String francia(@PathVariable Integer cantidad){
 		
+		String s = String.valueOf(cantidad * francia.getIVA() + cantidad);
 		
-		return "bonjour";
+		return "cantidad: "+s;
 	}
 	
 	
 	@GetMapping("/precio/españa/{cantidad}")
 	@ResponseBody
-	public String españa(@PathVariable Integer cantidad, PrecioFinal precioFinal){
+	public String españa(@PathVariable Integer cantidad){
 		
+		String s = String.valueOf(cantidad * españa.getIVA() + cantidad);
 		
-		return "españita";
+		return "cantidad: "+s;
 	}
 }
